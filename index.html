@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Happy Valentine's Day Grace ❤️</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #ff6b81, #ff4757);
+  font-family: 'Georgia', serif;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  top: 15%;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.3em;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: auto;
+}
+
+.heart {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  animation: float 6s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh) scale(1); opacity: 1; }
+  100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Happy Valentine's Day, Grace ❤️</h1>
+
+  <p>
+    My beautiful Grace,<br><br>
+    Your smile is the sunrise that warms my soul,<br>
+    your love the quiet place where my heart finds home.<br><br>
+
+    In your laughter I hear joy,<br>
+    in your strength I see grace,<br>
+    in your arms I find forever.<br><br>
+
+    You are my peace in every storm,<br>
+    my light in every shadow,<br>
+    my greatest blessing in this life.<br><br>
+
+    Today and always,<br>
+    I choose you.<br><br>
+
+    With all my love,<br>
+    Your husband 💕
+  </p>
+</div>
+
+<script>
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 6000);
+}
+
+setInterval(createHeart, 500);
+</script>
+
+</body>
+</html>
